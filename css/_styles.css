@@ -1,0 +1,314 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* = = = */
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body {
+  color: #353535;
+  font-family: 'Arvo', serif;
+}
+
+h1 {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+  padding: 0 20px;
+}
+
+a {
+  border-bottom: 1px dashed;
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  border-color: #22DD94;
+}
+
+.fh {
+  height: 100vh;
+}
+
+.tac {
+  text-align: center;
+}
+
+.por {
+  position: relative;
+}
+
+.dib {
+  display: inline-block;
+}
+
+.eased {
+  -moz-transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.flex-wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-center {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+}
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.info p {
+  display: inline-block;
+  opacity: 0;
+  padding: 0;
+  position: relative;
+  height: 0;
+  max-width: 50%;
+  z-index: 10;
+}
+
+.info p a {
+  pointer-events: none;
+}
+
+/* Variations */
+body[data-variation="1"] {
+  background: url('../assets/geometry_@2x.png');
+}
+
+body[data-variation="2"] {
+  background: url('../assets/photography_@2x.jpg') no-repeat center;
+  background-size: cover;
+}
+
+body[data-variation="3"] {
+  background: url('../assets/foggy_birds_@2x.png');
+}
+
+body[data-variation="1"] .wrapper {
+  background: rgba(55, 242, 182, 0.25);
+}
+
+body[data-variation="2"] .wrapper {
+  background: rgba(236, 236, 236, 0.75);
+}
+
+body[data-variation="3"] .wrapper {
+  background: rgba(44, 184, 251, 0.25);
+}
+
+body[data-variation="1"] .info p[data-variation="1"],
+body[data-variation="2"] .info p[data-variation="2"],
+body[data-variation="3"] .info p[data-variation="3"] {
+  height: auto;
+  opacity: 1;
+  padding-top: 40px;
+  z-index: 100;
+}
+
+body[data-variation="1"] .info p[data-variation="1"] a,
+body[data-variation="2"] .info p[data-variation="2"] a,
+body[data-variation="3"] .info p[data-variation="3"] a {
+  pointer-events: auto;
+}
+
+/* Custom Select */
+select.is-custom {
+  cursor: pointer;
+  height: 100% !important;
+  z-index: 10;
+}
+.customSelect:after,
+.customSelectInner {
+  background: #FFF;
+  -moz-transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.customSelect.customSelectDisabledOption:after,
+.customSelect.customSelectDisabledOption .customSelectInner {
+  background: transparent;
+}
+.customSelect.customSelectHover:after,
+.customSelect.customSelectDisabledOption.customSelectHover:after {
+  background: #22DD94;
+}
+.customSelect {
+  border: 3px dashed;
+  cursor: pointer;
+  margin-left: 3px;
+  position: relative;
+}
+.customSelect:after {
+  border-left: 3px dashed;
+  display: inline-block;
+  content: "\f0d7";
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  line-height: 2.5rem;
+  margin-left: 5px;
+  padding: 0 5px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-rendering: auto;
+  top: 0;
+  width: 40px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.customSelectInner {
+  padding: 0 48px 0 7px;
+  text-align: left;
+  width: auto !important;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .wrapper {
+    min-height: 800px;
+    padding: 40px 0;
+  }
+
+  .info p {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.7rem;
+  }
+
+  .wrapper {
+    display: block;
+    height: auto;
+    min-height: 600px;
+  }
+
+  body[data-variation="1"] .info p[data-variation="1"],
+  body[data-variation="2"] .info p[data-variation="2"],
+  body[data-variation="3"] .info p[data-variation="3"] {;
+    padding-top: 30px;
+  }
+
+  .customSelect {
+    border: 1px dashed;
+  }
+
+  .customSelect:after {
+    border-left: 1px dashed;
+    line-height: 1.7rem;
+    width: 30px;
+  }
+
+  .customSelectInner {
+    padding: 0 38px 0 7px;
+  }
+}
